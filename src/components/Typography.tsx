@@ -5,7 +5,7 @@ import { Typography as MUITypography } from '@material-ui/core'
 import theme from '../theme'
 
 interface TypoProps {
-  children?: Node
+  children?: React.ReactNode
   text?: string
   buttonTextSize?: 's' | 'l'
   variant?:
@@ -24,14 +24,15 @@ interface TypoProps {
     | 'body2'
     | 'overline'
     | 'srOnly'
-    | undefined
+  color?: 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error'
 }
 
 export const Typography = ({
   variant,
   children,
   text,
-  buttonTextSize
+  buttonTextSize,
+  color
 }: TypoProps) => {
   const StyledTypo = withStyles({
     button: {
@@ -40,12 +41,15 @@ export const Typography = ({
   })(MUITypography)
   return (
     <ThemeProvider theme={theme}>
-      <StyledTypo variant={variant}>{children ? children : text}</StyledTypo>
+      <StyledTypo color={color} variant={variant}>
+        {children ? children : text}
+      </StyledTypo>
     </ThemeProvider>
   )
 }
 
 Typography.defaultProps = {
   text: 'Book now',
-  buttonTextSize: 's'
+  buttonTextSize: 's',
+  color: 'textPrimary'
 }

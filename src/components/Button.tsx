@@ -6,6 +6,7 @@ import theme from '../theme'
 interface ButtonProps {
   text: string
   size?: 'small' | 'large'
+  // width 100% or auto
 }
 
 export const Button = ({ text, size }: ButtonProps) => {
