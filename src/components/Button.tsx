@@ -5,14 +5,13 @@ import theme from '../theme'
 
 interface ButtonProps {
   text: string
-  size?: 'small' | 'large'
+  small?: boolean
   stretch?: boolean
 }
 
-export const Button = ({ text, size, stretch }: ButtonProps) => {
+export const Button = ({ text, small, stretch }: ButtonProps) => {
   const StyledButton = withStyles({
     root: {
-      maxHeight: size === 'small' ? 52 : 74,
       width: stretch ? '100%' : 'auto',
       borderRadius: 100,
       boxShadow: '0 2px 2px rgba(0,0,0,0.15)',
@@ -28,9 +27,11 @@ export const Button = ({ text, size, stretch }: ButtonProps) => {
       }
     },
     label: {
-      fontSize: size === 'small' ? '1rem' : '1.5rem',
+      fontSize: small ? '1rem' : '1.5rem',
       textTransform: 'uppercase',
       letterSpacing: 1,
+      display: 'block',
+      whiteSpace: 'nowrap',
       padding: '.75rem 1.5rem'
     }
   })(MUIButton)
