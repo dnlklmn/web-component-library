@@ -7,5 +7,5 @@ Large Primary Button (default)
 Small Primary Button
 
 ```js
-<Button size='small' />
+<Button small={true} />
 ```
