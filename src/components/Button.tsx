@@ -6,16 +6,19 @@ import theme from '../theme'
 interface ButtonProps {
   text: string
   size?: 'small' | 'large'
-  // width 100% or auto
+  stretch: boolean
 }
 
-export const Button = ({ text, size }: ButtonProps) => {
+export const Button = ({ text, size, stretch }: ButtonProps) => {
   const StyledButton = withStyles({
     root: {
+      maxHeight: size === 'large' ? 74 : 52,
+      width: stretch ? '100%' : 'auto',
       borderRadius: 100,
       boxShadow: '0 2px 2px rgba(0,0,0,0.15)',
       padding: 0,
       margin: 0,
+      border: 0,
       '&.MuiButton-text': {
         boxShadow: '0 2px 2px rgba(0,0,0,0.15)',
         padding: 0
@@ -43,5 +46,6 @@ export const Button = ({ text, size }: ButtonProps) => {
 
 Button.defaultProps = {
   text: 'Book now',
-  size: ''
+  size: '',
+  stretch: false
 }
