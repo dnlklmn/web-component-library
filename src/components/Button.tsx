@@ -6,7 +6,7 @@ import theme from '../theme'
 interface ButtonProps {
   text: string
   size?: 'small' | 'large'
-  stretch: boolean
+  stretch?: boolean
 }
 
 export const Button = ({ text, size, stretch }: ButtonProps) => {
