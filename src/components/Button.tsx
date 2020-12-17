@@ -43,8 +43,7 @@ export const Button = ({
       display: 'block',
       whiteSpace: 'nowrap',
       padding: '.75rem 1.5rem'
-    },
-    icon: {}
+    }
   })(MUIButton)
 
   const IconBefore =
