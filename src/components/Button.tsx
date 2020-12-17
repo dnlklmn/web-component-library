@@ -31,8 +31,7 @@ export const Button = ({ text, size, stretch }: ButtonProps) => {
       fontSize: size === 'small' ? '1rem' : '1.5rem',
       textTransform: 'uppercase',
       letterSpacing: 1,
-      width: '105%',
-      padding: size === 'small' ? '.75rem 1.5rem' : '1rem 1.75rem'
+      padding: '.75rem 1.5rem'
     }
   })(MUIButton)
 
