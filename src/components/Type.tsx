@@ -3,7 +3,22 @@ import { Typography } from './Typography'
 
 interface TypeProps {
   text?: string
-  variant?: string
+  variant?:
+    | 'button'
+    | 'caption'
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'inherit'
+    | 'subtitle1'
+    | 'subtitle2'
+    | 'body1'
+    | 'body2'
+    | 'overline'
+    | 'srOnly'
   color?: 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error'
 }
 
