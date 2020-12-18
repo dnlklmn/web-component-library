@@ -66,6 +66,7 @@
     "@types/material-ui": "^0.21.8",
     "@types/styled-components": "^5.1.5",
     "@types/styled-system": "^5.1.10",
+    "acorn-dynamic-import": "^4.0.0",
     "feather-icons-react": "^0.4.1",
     "polished": "^4.0.5",
     "react-styleguidist": "^11.1.5",
