@@ -97,14 +97,15 @@ const theme = createMuiTheme({
     body2: { fontSize: '0.75rem', lineHeight: 1.4 },
 
     // other
-    overline: {
-      fontSize: '0.75rem',
-      lineHeight: 1.4
-    },
+
     caption: {
       fontSize: '1rem',
       lineHeight: 1.4,
       opacity: 0.5
+    },
+    overline: {
+      fontSize: '0.75rem',
+      lineHeight: 1.4
     },
 
     // button
