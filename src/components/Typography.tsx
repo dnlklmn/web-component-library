@@ -24,12 +24,24 @@ interface TypoProps {
     | 'overline'
     | 'srOnly'
   color?: 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error'
+  align?: 'inherit' | 'left' | 'center' | 'right' | 'justify'
 }
 
-export const Typography = ({ variant, children, text, color }: TypoProps) => {
+export const Typography = ({
+  variant,
+  children,
+  text,
+  color,
+  align
+}: TypoProps) => {
   return (
     <ThemeProvider theme={theme}>
-      <MUITypography color={color} variant={variant} display='block'>
+      <MUITypography
+        color={color}
+        variant={variant}
+        align={align}
+        display='block'
+      >
         {children ? children : text}
       </MUITypography>
     </ThemeProvider>
@@ -38,5 +50,6 @@ export const Typography = ({ variant, children, text, color }: TypoProps) => {
 
 Typography.defaultProps = {
   text: 'Book now',
-  color: 'textPrimary'
+  color: 'textPrimary',
+  align: 'left'
 }
