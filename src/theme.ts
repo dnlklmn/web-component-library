@@ -105,7 +105,8 @@ const theme = createMuiTheme({
     },
     overline: {
       fontSize: '0.75rem',
-      lineHeight: 1.4
+      lineHeight: 1.4,
+      textTransform: 'none'
     },
 
     // button
