@@ -1,5 +1,8 @@
 import * as React from 'react'
-import { Typography } from './Typography'
+import { ThemeProvider } from '@material-ui/core/styles'
+import { Typography as MUITypography } from '@material-ui/core'
+
+import theme from '../theme'
 
 interface TypeProps {
   text?: string
@@ -31,9 +34,11 @@ export const Type = ({ text, variant, color }: TypeProps) => {
     : null
 
   return (
-    <Typography color={color} variant={variant}>
-      <div dangerouslySetInnerHTML={{ __html: parsedText }} />
-    </Typography>
+    <ThemeProvider theme={theme}>
+      <MUITypography color={color} variant={variant}>
+        <div dangerouslySetInnerHTML={{ __html: parsedText }} />
+      </MUITypography>
+    </ThemeProvider>
   )
 }
 
