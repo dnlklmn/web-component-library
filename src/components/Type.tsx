@@ -23,9 +23,10 @@ interface TypeProps {
     | 'overline'
     | 'srOnly'
   color?: 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error'
+  align?: 'inherit' | 'left' | 'center' | 'right' | 'justify'
 }
 
-export const Type = ({ text, variant, color }: TypeProps) => {
+export const Type = ({ text, variant, color, align }: TypeProps) => {
   let parsedText: any = text
     ? text
         .replace(/\*\*(.*?)\*\*/gim, '<b>$1</b>')
@@ -35,7 +36,12 @@ export const Type = ({ text, variant, color }: TypeProps) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <MUITypography color={color} variant={variant}>
+      <MUITypography
+        color={color}
+        align={align}
+        variant={variant}
+        display='block'
+      >
         <div dangerouslySetInnerHTML={{ __html: parsedText }} />
       </MUITypography>
     </ThemeProvider>
@@ -47,5 +53,6 @@ Type.defaultProps = {
   width: 200,
   text: 'Hello **world** and hello **everyone**',
   variant: 'h4',
-  color: 'textPrimary'
+  color: 'textPrimary',
+  align: 'left'
 }
