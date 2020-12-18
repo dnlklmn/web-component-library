@@ -104,6 +104,11 @@ const theme = createMuiTheme({
       opacity: 0.5
     },
 
+    overline: {
+      fontSize: '0.75rem',
+      lineHeight: 1.4
+    },
+
     // button
     button: {
       fontSize: '1rem',
