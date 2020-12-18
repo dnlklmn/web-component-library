@@ -11,6 +11,8 @@ interface ButtonProps {
   stretch?: boolean
   withIcon?: 'before' | 'none' | 'after'
   icon?: string
+  variant?: 'contained' | 'text' | 'outlined'
+  color?: 'default' | 'inherit' | 'primary' | 'secondary'
 }
 
 export const Button = ({
@@ -18,19 +20,42 @@ export const Button = ({
   small,
   stretch,
   withIcon,
-  icon
+  icon,
+  variant,
+  color
 }: ButtonProps) => {
   const StyledButton = withStyles({
     root: {
       width: stretch ? '100%' : 'auto',
       borderRadius: 100,
       boxShadow: '0 2px 2px rgba(0,0,0,0.15)',
-      padding: 0,
+      padding: '.75rem 1.5rem',
       margin: 0,
       border: 0,
       '&.MuiButton-text': {
-        boxShadow: '0 2px 2px rgba(0,0,0,0.15)',
-        padding: 0
+        boxShadow: '0 0 0 rgba(255,255,255,0)',
+        padding: 0,
+        borderRadius: 5
+      },
+      '&.MuiButton-text:hover': {
+        boxShadow: '0 0 0 rgba(255,255,255,0)'
+      },
+      '&.MuiButton-outlined': {
+        boxShadow: `inset 0 0 0 2px ${
+          color === 'primary'
+            ? theme.palette.primary.main
+            : theme.palette.secondary.main
+        }`,
+        borderRadius: 100,
+        border: 0
+      },
+      '&.MuiButton-outlined:hover': {
+        boxShadow: `inset 0 0 0 2px ${
+          color === 'primary'
+            ? theme.palette.primary.main
+            : theme.palette.secondary.main
+        }`,
+        border: 0
       },
       '&:hover': {
         boxShadow: '0 4px 8px rgba(0,0,0,0.15)'
@@ -41,8 +66,7 @@ export const Button = ({
       textTransform: 'uppercase',
       letterSpacing: 1,
       display: 'block',
-      whiteSpace: 'nowrap',
-      padding: '.75rem 1.5rem'
+      whiteSpace: 'nowrap'
     }
   })(MUIButton)
 
@@ -72,7 +96,11 @@ export const Button = ({
 
   return (
     <ThemeProvider theme={theme}>
-      <StyledButton color='primary' variant='contained'>
+      <StyledButton
+        color={color}
+        disableRipple={variant === 'text' ? true : false}
+        variant={variant}
+      >
         <div
           style={{
             display: 'flex',
@@ -96,5 +124,7 @@ Button.defaultProps = {
   size: '',
   stretch: false,
   withIcon: 'before',
-  icon: 'box'
+  icon: 'box',
+  variant: 'contained',
+  color: 'primary'
 }
