@@ -99,8 +99,7 @@ const theme = createMuiTheme({
     // other
     overline: {
       fontSize: '0.75rem',
-      lineHeight: 1.4,
-      textTransform: 'uppercase'
+      lineHeight: 1.4
     },
     caption: {
       fontSize: '1rem',
