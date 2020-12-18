@@ -109,7 +109,10 @@ const theme = createMuiTheme({
     },
 
     // button
-    button: { fontFamily: 'Typ1451LLWeb, Typ1451LL-Bold, sans-serif' }
+    button: {
+      fontSize: '1rem',
+      fontFamily: 'Typ1451LLWeb, Typ1451LL-Bold, sans-serif'
+    }
   }
 })
 
