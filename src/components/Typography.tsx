@@ -29,7 +29,7 @@ interface TypoProps {
 export const Typography = ({ variant, children, text, color }: TypoProps) => {
   return (
     <ThemeProvider theme={theme}>
-      <MUITypography color={color} variant={variant}>
+      <MUITypography color={color} variant={variant} display='block'>
         {children ? children : text}
       </MUITypography>
     </ThemeProvider>
