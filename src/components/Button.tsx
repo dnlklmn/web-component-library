@@ -1,9 +1,10 @@
 import React from 'react'
-import { ThemeProvider, withStyles } from '@material-ui/core/styles'
+import { withStyles, ThemeProvider } from '@material-ui/core/styles'
 import { Button as MUIButton } from '@material-ui/core'
-import theme from '../theme'
 import FeatherIcon from 'feather-icons-react'
 import { Spacer } from './Spacer'
+import theme, { inverted } from '../theme'
+import { store } from './Switch'
 
 interface ButtonProps {
   text: string
@@ -94,8 +95,13 @@ export const Button = ({
         ]
       : null
 
+  const [isit, setIsit] = React.useState('quarters')
+  const currentTheme = (state: any) => state.theme
+
+  store.subscribe(() => setIsit(currentTheme(store.getState())))
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={isit === 'quarters' ? theme : inverted}>
       <StyledButton
         color={color}
         disableRipple={variant === 'text' ? true : false}

@@ -6,6 +6,7 @@ import theme, { inverted } from './theme'
 
 interface Props {
   children: any
+  theme: any
 }
 
 export default ({ children }: Props) => (

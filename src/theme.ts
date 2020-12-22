@@ -35,7 +35,7 @@ const typ1451 = {
     'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF'
 }
 
-const theme = createMuiTheme({
+export const theme = createMuiTheme({
   overrides: {
     MuiCssBaseline: {
       '@global': {
@@ -120,6 +120,34 @@ const theme = createMuiTheme({
   }
 })
 
-export const inverted = createMuiTheme({ ...theme })
+export const inverted = createMuiTheme({
+  ...theme,
+  palette: {
+    primary: {
+      main: '#abcabc',
+      dark: '#329BB8',
+      light: '#4AB2CF',
+      contrastText: '#fff'
+    },
+    secondary: { main: '#c5801a', contrastText: '#fff', dark: '#C37D13' },
+    grey1: { main: '#f5f5f5' },
+    grey2: { main: '#dcdcdc' },
+    grey3: { main: '#aaaaaa' },
+    grey4: { main: '#7E7E7E' },
+    grey5: { main: '#303030' },
+    error: { main: '#D82749', contrastText: '#fff' },
+    success: { main: '#89AA36', contrastText: '#fff' },
+
+    background: { paper: '#fff', default: '#fafafa' },
+
+    text: { primary: '#303030' },
+
+    warning: { main: '#DDDB00', contrastText: '#303030' },
+
+    purple: { main: '#312A6F', contrastText: '#fff' },
+    green: { main: '#00A099', contrastText: '#fff' },
+    rose: { main: '#C6627A', contrastText: '#fff' }
+  }
+})
 
 export default theme
