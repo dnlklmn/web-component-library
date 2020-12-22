@@ -54,6 +54,4 @@ export const Switch = () => {
   )
 }
 
-Switch.defaultProps = {
-  size: 1
-}
+export default Switch
