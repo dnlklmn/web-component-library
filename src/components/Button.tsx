@@ -3,8 +3,10 @@ import { withStyles, ThemeProvider } from '@material-ui/core/styles'
 import { Button as MUIButton } from '@material-ui/core'
 import FeatherIcon from 'feather-icons-react'
 import { Spacer } from './Spacer'
-import theme, { inverted } from '../theme'
-import { store } from './Switch'
+import { quartersLight, mediciLight, currentTheme } from '../theme'
+
+const appliedTheme =
+  currentTheme === 'mediciLight' ? mediciLight : quartersLight
 
 interface ButtonProps {
   text: string
@@ -28,7 +30,7 @@ export const Button = ({
   const StyledButton = withStyles({
     root: {
       width: stretch ? '100%' : 'auto',
-      borderRadius: 100,
+      borderRadius: currentTheme === 'mediciLight' ? 5 : 100,
       boxShadow: '0 2px 2px rgba(0,0,0,0.15)',
       padding: '.75rem 1.5rem',
       margin: 0,
@@ -44,8 +46,8 @@ export const Button = ({
       '&.MuiButton-outlined': {
         boxShadow: `inset 0 0 0 2px ${
           color === 'primary'
-            ? theme.palette.primary.main
-            : theme.palette.secondary.main
+            ? appliedTheme.palette.primary.main
+            : appliedTheme.palette.secondary.main
         }`,
         borderRadius: 100,
         border: 0
@@ -53,8 +55,8 @@ export const Button = ({
       '&.MuiButton-outlined:hover': {
         boxShadow: `inset 0 0 0 2px ${
           color === 'primary'
-            ? theme.palette.primary.main
-            : theme.palette.secondary.main
+            ? appliedTheme.palette.primary.main
+            : appliedTheme.palette.secondary.main
         }`,
         border: 0
       },
@@ -95,13 +97,8 @@ export const Button = ({
         ]
       : null
 
-  const [isit, setIsit] = React.useState('quarters')
-  const currentTheme = (state: any) => state.theme
-
-  store.subscribe(() => setIsit(currentTheme(store.getState())))
-
   return (
-    <ThemeProvider theme={isit === 'quarters' ? theme : inverted}>
+    <ThemeProvider theme={appliedTheme}>
       <StyledButton
         color={color}
         disableRipple={variant === 'text' ? true : false}

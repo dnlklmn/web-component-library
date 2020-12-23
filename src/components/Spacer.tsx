@@ -1,18 +1,23 @@
 import React from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
-import theme from '../theme'
+import { quartersLight, mediciLight, currentTheme } from '../theme'
+
+const appliedTheme =
+  currentTheme === 'mediciLight' ? mediciLight : quartersLight
 
 interface ButtonProps {
   size: number
+  color?: string
 }
 
-export const Spacer = ({ size }: ButtonProps) => {
+export const Spacer = ({ size, color }: ButtonProps) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={appliedTheme}>
       <div
         style={{
-          width: theme.spacing(size),
-          height: theme.spacing(size)
+          width: appliedTheme.spacing(size),
+          height: appliedTheme.spacing(size),
+          background: color
         }}
       />
     </ThemeProvider>

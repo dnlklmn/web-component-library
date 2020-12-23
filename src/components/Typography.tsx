@@ -2,7 +2,10 @@ import React from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { Typography as MUITypography } from '@material-ui/core'
 
-import theme from '../theme'
+import { quartersLight, mediciLight, currentTheme } from '../theme'
+
+const appliedTheme =
+  currentTheme === 'mediciLight' ? mediciLight : quartersLight
 
 interface TypoProps {
   children?: React.ReactNode
@@ -35,7 +38,7 @@ export const Typography = ({
   align
 }: TypoProps) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={appliedTheme}>
       <MUITypography
         color={color}
         variant={variant}
