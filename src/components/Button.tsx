@@ -49,7 +49,7 @@ export const Button = ({
             ? appliedTheme.palette.primary.main
             : appliedTheme.palette.secondary.main
         }`,
-        borderRadius: 100,
+        borderRadius: currentTheme === 'mediciLight' ? 5 : 100,
         border: 0
       },
       '&.MuiButton-outlined:hover': {
