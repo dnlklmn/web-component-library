@@ -43,7 +43,7 @@ export const Type = ({ text, variant, color, align }: TypeProps) => {
         variant={variant}
         display='block'
       >
-        <div dangerouslySetInnerHTML={{ __html: parsedText }} />
+        <span dangerouslySetInnerHTML={{ __html: parsedText }} />
       </MUITypography>
     </ThemeProvider>
   )
@@ -52,7 +52,7 @@ export const Type = ({ text, variant, color, align }: TypeProps) => {
 Type.defaultProps = {
   height: 200,
   width: 200,
-  text: 'Hello **world** and hello **everyone**',
+  text: 'Hello **world** and hello *everyone*',
   variant: 'h4',
   color: 'textPrimary',
   align: 'left'
