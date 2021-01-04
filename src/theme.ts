@@ -1,7 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 // import Typ1451Woff from './fonts/Typ1451-LL-Web.woff'
 
-export const currentTheme = 'mediciLight'
+export const currentTheme = 'quartersLight'
 
 declare module '@material-ui/core/styles/createPalette' {
   interface Palette {
