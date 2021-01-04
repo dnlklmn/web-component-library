@@ -2,9 +2,9 @@ import React from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { Typography as MUITypography } from '@material-ui/core'
 
-import { mediciLight } from '../theme'
+import { mediciLight, quartersTheme, quartersLight } from '../theme'
 
-const appliedTheme = mediciLight
+const appliedTheme = quartersTheme ? quartersLight : mediciLight
 
 interface TypoProps {
   children?: React.ReactNode

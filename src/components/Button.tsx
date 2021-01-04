@@ -3,9 +3,9 @@ import { withStyles, ThemeProvider } from '@material-ui/core/styles'
 import { Button as MUIButton } from '@material-ui/core'
 import FeatherIcon from 'feather-icons-react'
 import { Spacer } from './Spacer'
-import { mediciLight } from '../theme'
+import { mediciLight, quartersLight, quartersTheme } from '../theme'
 
-const appliedTheme = mediciLight
+const appliedTheme = quartersTheme ? quartersLight : mediciLight
 
 interface ButtonProps {
   text: string
@@ -37,7 +37,7 @@ export const Button = ({
       '&.MuiButton-text': {
         boxShadow: '0 0 0 rgba(255,255,255,0)',
         padding: 0,
-        borderRadius: 5
+        borderRadius: quartersTheme ? 100 : 5
       },
       '&.MuiButton-text:hover': {
         boxShadow: '0 0 0 rgba(255,255,255,0)'
@@ -48,7 +48,7 @@ export const Button = ({
             ? appliedTheme.palette.primary.main
             : appliedTheme.palette.secondary.main
         }`,
-        borderRadius: 5,
+        borderRadius: quartersTheme ? 100 : 5,
         border: 0
       },
       '&.MuiButton-outlined:hover': {
