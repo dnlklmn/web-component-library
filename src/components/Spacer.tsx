@@ -1,9 +1,8 @@
 import React from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
-import { quartersLight, mediciLight, currentTheme } from '../theme'
+import { mediciLight } from '../theme'
 
-const appliedTheme =
-  currentTheme === 'mediciLight' ? mediciLight : quartersLight
+const appliedTheme = mediciLight
 
 interface ButtonProps {
   size: number

@@ -2,10 +2,9 @@ import * as React from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { Typography as MUITypography } from '@material-ui/core'
 
-import { quartersLight, mediciLight, currentTheme } from '../theme'
+import { mediciLight } from '../theme'
 
-const appliedTheme =
-  currentTheme === 'mediciLight' ? mediciLight : quartersLight
+const appliedTheme = mediciLight
 
 interface TypeProps {
   text?: string
