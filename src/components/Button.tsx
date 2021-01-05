@@ -61,6 +61,10 @@ export const Button = ({
         }`,
         border: 0
       },
+      '&.MuiButton-outlined.Mui-disabled': {
+        boxShadow: `inset 0 0 0 2px ${appliedTheme.palette.grey2.main}`,
+        border: 0
+      },
       '&:hover': {
         boxShadow: '0 4px 8px rgba(0,0,0,0.15)'
       }
@@ -130,7 +134,7 @@ Button.defaultProps = {
   stretch: false,
   withIcon: 'before',
   icon: 'box',
-  variant: 'contained',
+  variant: 'outlined',
   color: 'primary',
-  disabled: false
+  disabled: true
 }
