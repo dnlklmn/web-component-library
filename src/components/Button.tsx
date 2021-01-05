@@ -15,6 +15,7 @@ interface ButtonProps {
   icon?: string
   variant?: 'contained' | 'text' | 'outlined'
   color?: 'default' | 'inherit' | 'primary' | 'secondary'
+  disabled?: boolean
 }
 
 export const Button = ({
@@ -24,7 +25,8 @@ export const Button = ({
   withIcon,
   icon,
   variant,
-  color
+  color,
+  disabled
 }: ButtonProps) => {
   const StyledButton = withStyles({
     root: {
@@ -99,6 +101,7 @@ export const Button = ({
   return (
     <ThemeProvider theme={appliedTheme}>
       <StyledButton
+        disabled={disabled}
         color={color}
         disableRipple={variant === 'text' ? true : false}
         variant={variant}
@@ -128,5 +131,6 @@ Button.defaultProps = {
   withIcon: 'before',
   icon: 'box',
   variant: 'contained',
-  color: 'primary'
+  color: 'primary',
+  disabled: false
 }

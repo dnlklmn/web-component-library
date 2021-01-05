@@ -1,4 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles'
+
 // import Typ1451Woff from './fonts/Typ1451-LL-Web.woff'
 
 export const quartersTheme = false
@@ -65,14 +66,20 @@ export const quartersLight = createMuiTheme({
 
     background: { paper: '#fff', default: '#fafafa' },
 
-    text: { primary: '#303030' },
+    text: { primary: '#303030', secondary: '#A1A1A1' },
 
     warning: { main: '#DDDB00', contrastText: '#303030' },
 
     purple: { main: '#312A6F', contrastText: '#fff' },
     green: { main: '#00A099', contrastText: '#fff' },
-    rose: { main: '#C6627A', contrastText: '#fff' }
+    rose: { main: '#C6627A', contrastText: '#fff' },
+
+    action: {
+      active: '#abcabc',
+      hover: '#abcabc'
+    }
   },
+
   typography: {
     fontFamily: 'Formale Grotesque QRT, sans-serif',
     fontSize: 16,
@@ -125,6 +132,15 @@ export const quartersLight = createMuiTheme({
 
 export const mediciLight = createMuiTheme({
   ...quartersLight,
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        html: {
+          WebkitFontSmoothing: 'auto'
+        }
+      }
+    }
+  },
   palette: {
     ...quartersLight.palette,
     primary: {
@@ -142,7 +158,7 @@ export const mediciLight = createMuiTheme({
 
     background: { paper: '#fff', default: '#fafafa' },
 
-    text: { primary: '#303030' },
+    text: { primary: '#303030', secondary: '#A1A1A1' },
 
     warning: { main: '#FCC404', contrastText: '#303030' }
   },
