@@ -2,12 +2,13 @@
  * Default CSS definition for typescript,
  * will be overridden with file-specific definitions by rollup
  */
+
+import Typography from 'material-ui/styles/typography'
+
 declare module '*.css' {
   const content: { [className: string]: string }
   export default content
 }
-
-declare module 'feather-icons-react'
 
 interface SvgrComponent
   extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}

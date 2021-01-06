@@ -26,6 +26,12 @@ declare module '@material-ui/core/styles/createPalette' {
     green: PaletteOptions['primary']
     rose: PaletteOptions['primary']
   }
+  interface Typography {
+    letterSpacing: Typography[]
+  }
+  interface TypographyOptions {
+    letterSpacing: TypographyOptions[]
+  }
 }
 
 const typ1451 = {

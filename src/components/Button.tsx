@@ -33,7 +33,7 @@ export const Button = ({
       width: stretch ? '100%' : 'auto',
       borderRadius: 5,
       boxShadow: '0 2px 2px rgba(0,0,0,0.15)',
-      padding: '.75rem 1.5rem',
+      padding: '.8rem 1.5rem',
       margin: 0,
       border: 0,
       '&.MuiButton-text': {
