@@ -164,33 +164,95 @@ export const mediciLight = createMuiTheme({
     fontSize: 16,
 
     // website hero
-    h1: { fontSize: '3rem', fontWeight: 600, textTransform: 'uppercase' },
+    h1: {
+      fontSize: '3rem',
+      fontWeight: 600,
+      textTransform: 'uppercase',
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden'
+    },
     h2: {
       fontSize: '2.125rem',
       fontWeight: 600,
       textTransform: 'uppercase',
-      lineHeight: 1.2
+      lineHeight: 1.2,
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden'
     },
     // headings
-    h3: { fontSize: '2.5rem', lineHeight: 1.2 },
-    h4: { fontSize: '2.125rem', lineHeight: 1.2 },
-    h5: { fontSize: '1.5rem', lineHeight: 1.2 },
-    h6: { fontSize: '1.25rem', lineHeight: 1.2 },
+    h3: {
+      fontSize: '2.5rem',
+      lineHeight: 1.2,
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden'
+    },
+    h4: {
+      fontSize: '2.125rem',
+      lineHeight: 1.2,
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden'
+    },
+    h5: {
+      fontSize: '1.5rem',
+      lineHeight: 1.2,
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden'
+    },
+    h6: {
+      fontSize: '1.25rem',
+      lineHeight: 1.2,
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden'
+    },
 
     // subtitles
-    subtitle1: { fontSize: '1.5rem', fontWeight: 600, lineHeight: 1.4 },
-    subtitle2: { fontSize: '1rem', lineHeight: 1.4 },
+    subtitle1: {
+      fontSize: '1.5rem',
+      fontWeight: 600,
+      lineHeight: 1.4,
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden'
+    },
+    subtitle2: {
+      fontSize: '1rem',
+      lineHeight: 1.4,
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden'
+    },
 
     // body
-    body1: { fontSize: '1rem', lineHeight: 1.4 },
-    body2: { fontSize: '0.75rem', lineHeight: 1.4 },
+    body1: {
+      fontSize: '1rem',
+      lineHeight: 1.4,
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden'
+    },
+    body2: {
+      fontSize: '0.75rem',
+      lineHeight: 1.4,
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden'
+    },
 
     // other
 
     caption: {
       fontSize: '1rem',
       lineHeight: 1.4,
-      opacity: 0.5
+      opacity: 0.5,
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden'
     },
 
     overline: {
@@ -204,7 +266,10 @@ export const mediciLight = createMuiTheme({
     // button
     button: {
       fontSize: '1rem',
-      fontWeight: 700
+      fontWeight: 700,
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden'
     }
   }
 })
