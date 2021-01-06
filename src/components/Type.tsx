@@ -8,8 +8,6 @@ const appliedTheme = quartersTheme ? quartersLight : mediciLight
 
 const useStyles = makeStyles({
   root: {
-    letterSpacing: 1.2,
-
     '& a': {
       color: appliedTheme.palette.primary.main,
       textDecoration: 'none',
@@ -70,7 +68,8 @@ export const Type = ({ text, variant, color, align }: TypeProps) => {
 Type.defaultProps = {
   height: 200,
   width: 200,
-  text: 'Hello **world** and  *everyone!* [hello ->](http://quarters.com) ',
+  text:
+    'Hello **world** and  *everyone!* &#64 Q [hello ->](http://quarters.com) ',
   variant: 'h4',
   color: 'textPrimary',
   align: 'left'

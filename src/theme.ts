@@ -169,7 +169,7 @@ export const mediciLight = createMuiTheme({
     warning: { main: '#FCC404', contrastText: '#303030' }
   },
   typography: {
-    fontFamily: 'Cabin, sans-serif',
+    fontFamily: 'Noto Sans, sans-serif',
     fontSize: 16,
 
     // website hero
