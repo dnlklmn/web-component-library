@@ -134,7 +134,7 @@ Button.defaultProps = {
   stretch: false,
   withIcon: 'before',
   icon: 'box',
-  variant: 'outlined',
+  variant: 'contained',
   color: 'primary',
-  disabled: true
+  disabled: false
 }

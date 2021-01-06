@@ -138,15 +138,6 @@ export const quartersLight = createMuiTheme({
 
 export const mediciLight = createMuiTheme({
   ...quartersLight,
-  overrides: {
-    MuiCssBaseline: {
-      '@global': {
-        html: {
-          WebkitFontSmoothing: 'auto'
-        }
-      }
-    }
-  },
   palette: {
     ...quartersLight.palette,
     primary: {
@@ -213,7 +204,7 @@ export const mediciLight = createMuiTheme({
     // button
     button: {
       fontSize: '1rem',
-      fontWeight: 600
+      fontWeight: 700
     }
   }
 })
