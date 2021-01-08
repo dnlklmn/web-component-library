@@ -16,6 +16,8 @@ interface ButtonProps {
   variant?: 'contained' | 'text' | 'outlined'
   color?: 'default' | 'inherit' | 'primary' | 'secondary'
   disabled?: boolean
+  onClick?: any
+  ariaControls?: string
 }
 
 export const Button = ({
@@ -26,7 +28,9 @@ export const Button = ({
   icon,
   variant,
   color,
-  disabled
+  disabled,
+  onClick,
+  ariaControls
 }: ButtonProps) => {
   const StyledButton = withStyles({
     root: {
@@ -105,6 +109,8 @@ export const Button = ({
   return (
     <ThemeProvider theme={appliedTheme}>
       <StyledButton
+        aria-controls={ariaControls}
+        onClick={onClick}
         disabled={disabled}
         color={color}
         disableRipple={variant === 'text' ? true : false}
