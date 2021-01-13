@@ -35,7 +35,7 @@ export const Button = ({
   const StyledButton = withStyles({
     root: {
       width: stretch ? '100%' : 'auto',
-      borderRadius: 5,
+      borderRadius: 100,
       boxShadow: '0 2px 2px rgba(0,0,0,0.15)',
       padding: '.8rem 1.5rem',
       margin: 0,
