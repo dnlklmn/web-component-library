@@ -15,6 +15,7 @@ declare module '@material-ui/core/styles/createPalette' {
     purple: Palette['primary']
     green: Palette['primary']
     rose: Palette['primary']
+    white: Palette['primary']
   }
   interface PaletteOptions {
     grey1: PaletteOptions['primary']
@@ -25,6 +26,7 @@ declare module '@material-ui/core/styles/createPalette' {
     purple: PaletteOptions['primary']
     green: PaletteOptions['primary']
     rose: PaletteOptions['primary']
+    white: PaletteOptions['primary']
   }
   interface Typography {
     letterSpacing: Typography[]
@@ -69,6 +71,7 @@ export const quartersLight = createMuiTheme({
     grey5: { main: '#303030' },
     error: { main: '#D82749', contrastText: '#fff' },
     success: { main: '#89AA36', contrastText: '#fff' },
+    white: { main: '#fff', contrastText: '#303030' },
 
     background: { paper: '#fff', default: '#fafafa' },
 

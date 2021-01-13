@@ -6,16 +6,6 @@ import { mediciLight, quartersTheme, quartersLight } from '../theme'
 
 const appliedTheme = quartersTheme ? quartersLight : mediciLight
 
-const useStyles = makeStyles({
-  root: {
-    '& a': {
-      color: appliedTheme.palette.primary.main,
-      textDecoration: 'none',
-      fontWeight: 600
-    }
-  }
-})
-
 interface TypeProps {
   text?: string
   variant?:
@@ -34,11 +24,45 @@ interface TypeProps {
     | 'body2'
     | 'overline'
     | 'srOnly'
-  color?: 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error'
+  color?:
+    | 'primary'
+    | 'secondary'
+    | 'textPrimary'
+    | 'textSecondary'
+    | 'error'
+    | 'white'
   align?: 'inherit' | 'left' | 'center' | 'right' | 'justify'
 }
 
 export const Type = ({ text, variant, color, align }: TypeProps) => {
+  let colorDecoder
+  if (color === 'textPrimary') {
+    colorDecoder = appliedTheme.palette.grey5.main
+  }
+  if (color === 'textSecondary') {
+    colorDecoder = appliedTheme.palette.grey2.main
+  }
+  if (color === 'primary') {
+    colorDecoder = appliedTheme.palette.primary.main
+  }
+  if (color === 'secondary') {
+    colorDecoder = appliedTheme.palette.secondary.main
+  }
+  if (color === 'white') {
+    colorDecoder = appliedTheme.palette.white.main
+  }
+
+  const useStyles = makeStyles({
+    root: {
+      '& a': {
+        color: appliedTheme.palette.primary.main,
+        textDecoration: 'none',
+        fontWeight: 600
+      },
+      color: colorDecoder
+    }
+  })
+
   const classes = useStyles()
   let parsedText: any = text
     ? text
@@ -54,7 +78,6 @@ export const Type = ({ text, variant, color, align }: TypeProps) => {
       <CssBaseline />
       <MUITypography
         className={classes.root}
-        color={color}
         align={align}
         variant={variant}
         display='block'
