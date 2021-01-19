@@ -95,7 +95,7 @@ Type.defaultProps = {
   height: 200,
   width: 200,
   text:
-    'Hello **world** and  *everyone!* &#64 Q [hello ->](http://quarters.com) ',
+    'Hello **world** and *everyone!* &#64 Q [hello ->](http://quarters.com) ',
   variant: 'h4',
   color: 'white',
   align: 'left'
