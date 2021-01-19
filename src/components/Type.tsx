@@ -51,6 +51,9 @@ export const Type = ({ text, variant, color, align }: TypeProps) => {
   if (color === 'white') {
     colorDecoder = appliedTheme.palette.white.main
   }
+  if (color === 'error') {
+    colorDecoder = appliedTheme.palette.error.main
+  }
 
   const useStyles = makeStyles({
     root: {
