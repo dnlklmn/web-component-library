@@ -40,7 +40,7 @@ export const Type = ({ text, variant, color, align }: TypeProps) => {
     colorDecoder = appliedTheme.palette.grey5.main
   }
   if (color === 'textSecondary') {
-    colorDecoder = appliedTheme.palette.grey2.main
+    colorDecoder = appliedTheme.palette.grey3.main
   }
   if (color === 'primary') {
     colorDecoder = appliedTheme.palette.primary.main
@@ -97,6 +97,6 @@ Type.defaultProps = {
   text:
     'Hello **world** and *everyone!* &#64 Q [hello ->](http://quarters.com) ',
   variant: 'h4',
-  color: 'white',
+  color: 'textSecondary',
   align: 'left'
 }

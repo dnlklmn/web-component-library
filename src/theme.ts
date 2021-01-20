@@ -75,7 +75,7 @@ export const quartersLight = createMuiTheme({
 
     background: { paper: '#fff', default: '#fafafa' },
 
-    text: { primary: '#303030', secondary: '#A1A1A1' },
+    text: { primary: '#303030', secondary: '#7A7A7A' },
 
     warning: { main: '#DDDB00', contrastText: '#303030' },
 
@@ -158,7 +158,7 @@ export const mediciLight = createMuiTheme({
 
     background: { paper: '#fff', default: '#fafafa' },
 
-    text: { primary: '#303030', secondary: '#A1A1A1' },
+    text: { primary: '#303030', secondary: '#7A7A7A' },
 
     warning: { main: '#FCC404', contrastText: '#303030' }
   },
