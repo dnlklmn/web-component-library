@@ -2,7 +2,7 @@ import { createMuiTheme } from '@material-ui/core/styles'
 
 // import Typ1451Woff from './fonts/Typ1451-LL-Web.woff'
 
-export const quartersTheme = false
+export const quartersTheme = true
 // false: Medici
 
 declare module '@material-ui/core/styles/createPalette' {
