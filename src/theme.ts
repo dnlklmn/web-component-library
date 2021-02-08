@@ -57,7 +57,7 @@ export const quartersLight = createMuiTheme({
       light: '#FC4F78',
       contrastText: '#fff'
     },
-    secondary: { main: '#c5801a', contrastText: '#fff', dark: '#C37D13' },
+    secondary: { main: '#3BBEE3', contrastText: '#fff', dark: '#35BADE' },
     grey1: { main: '#f5f5f5' },
     grey2: { main: '#dcdcdc' },
     grey3: { main: '#aaaaaa' },
