@@ -28,12 +28,6 @@ declare module '@material-ui/core/styles/createPalette' {
     rose: PaletteOptions['primary']
     white: PaletteOptions['primary']
   }
-  interface Typography {
-    letterSpacing: Typography[]
-  }
-  interface TypographyOptions {
-    letterSpacing: TypographyOptions[]
-  }
 }
 
 const typ1451 = {
@@ -58,9 +52,9 @@ export const quartersLight = createMuiTheme({
 
   palette: {
     primary: {
-      main: '#40a8c4',
-      dark: '#329BB8',
-      light: '#4AB2CF',
+      main: '#FF3D6A',
+      dark: '#F43460',
+      light: '#FC4F78',
       contrastText: '#fff'
     },
     secondary: { main: '#c5801a', contrastText: '#fff', dark: '#C37D13' },
@@ -134,7 +128,8 @@ export const quartersLight = createMuiTheme({
     // button
     button: {
       fontSize: '1rem',
-      fontFamily: 'Typ1451LLWeb-Bold, Typ1451LL-Bold, sans-serif'
+      fontWeight: 700,
+      letterSpacing: 0.5
     }
   }
 })

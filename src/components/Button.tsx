@@ -37,7 +37,7 @@ export const Button = ({
       width: stretch ? '100%' : 'auto',
       borderRadius: quartersTheme ? 100 : 5,
       boxShadow: '0 2px 2px rgba(0,0,0,0.15)',
-      padding: '.8rem 1.5rem',
+      padding: '.8rem 1.25rem',
       margin: 0,
       border: 0,
       '&.MuiButton-text': {
@@ -76,7 +76,6 @@ export const Button = ({
     label: {
       fontSize: small ? '1rem' : '1.5rem',
       textTransform: 'uppercase',
-      letterSpacing: 1,
       display: 'block',
       whiteSpace: 'nowrap'
     }
