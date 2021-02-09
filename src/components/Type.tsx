@@ -63,8 +63,8 @@ export const Type = ({ text, variant, color, align }: TypeProps) => {
     root: {
       '& a': {
         color: appliedTheme.palette.primary.main,
-        textDecoration: 'none',
-        fontWeight: 600
+        textDecoration: `underline ${appliedTheme.palette.primary.main}`,
+        fontWeight: 500
       },
       color: colorDecoder
     }
