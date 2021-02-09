@@ -31,7 +31,7 @@ interface TypeProps {
     | 'textSecondary'
     | 'error'
     | 'white'
-    | 'green'
+    | 'success'
   align?: 'inherit' | 'left' | 'center' | 'right' | 'justify'
 }
 
@@ -55,7 +55,7 @@ export const Type = ({ text, variant, color, align }: TypeProps) => {
   if (color === 'error') {
     colorDecoder = appliedTheme.palette.error.main
   }
-  if (color === 'green') {
+  if (color === 'success') {
     colorDecoder = appliedTheme.palette.success.main
   }
 
