@@ -31,6 +31,7 @@ interface TypeProps {
     | 'textSecondary'
     | 'error'
     | 'white'
+    | 'green'
   align?: 'inherit' | 'left' | 'center' | 'right' | 'justify'
 }
 
@@ -53,6 +54,9 @@ export const Type = ({ text, variant, color, align }: TypeProps) => {
   }
   if (color === 'error') {
     colorDecoder = appliedTheme.palette.error.main
+  }
+  if (color === 'green') {
+    colorDecoder = appliedTheme.palette.success.main
   }
 
   const useStyles = makeStyles({
@@ -97,6 +101,6 @@ Type.defaultProps = {
   text:
     'Hello **world** and *everyone!* &#64 Q [hello ->](http://quarters.com) ',
   variant: 'h4',
-  color: 'textSecondary',
+  color: 'green',
   align: 'left'
 }
