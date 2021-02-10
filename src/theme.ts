@@ -88,10 +88,10 @@ export const quartersLight = createMuiTheme({
     fontSize: 16,
 
     // website hero
-    h1: { fontSize: '3rem', fontWeight: 700, textTransform: 'uppercase' },
+    h1: { fontSize: '3rem', fontWeight: 600, textTransform: 'uppercase' },
     h2: {
       fontSize: '2.125rem',
-      fontWeight: 700,
+      fontWeight: 600,
       textTransform: 'uppercase',
       lineHeight: 1.2
     },
@@ -102,8 +102,8 @@ export const quartersLight = createMuiTheme({
     h6: { fontSize: '1.25rem', lineHeight: 1.2 },
 
     // subtitles
-    subtitle1: { fontSize: '1.5rem', fontWeight: 700, lineHeight: 1.4 },
-    subtitle2: { fontSize: '1rem', lineHeight: 1.4 },
+    subtitle1: { fontSize: '1.5rem', fontWeight: 600, lineHeight: 1.4 },
+    subtitle2: { fontSize: '1rem', fontWeight: 600, lineHeight: 1.4 },
 
     // body
     body1: { fontSize: '1rem', lineHeight: 1.4 },
@@ -128,7 +128,7 @@ export const quartersLight = createMuiTheme({
     // button
     button: {
       fontSize: '1rem',
-      fontWeight: 700,
+      fontWeight: 600,
       letterSpacing: 0.5
     }
   }
@@ -162,10 +162,10 @@ export const mediciLight = createMuiTheme({
     fontSize: 16,
 
     // website hero
-    h1: { fontSize: '3rem', fontWeight: 700, textTransform: 'uppercase' },
+    h1: { fontSize: '3rem', fontWeight: 600, textTransform: 'uppercase' },
     h2: {
       fontSize: '2.125rem',
-      fontWeight: 700,
+      fontWeight: 600,
       textTransform: 'uppercase',
       lineHeight: 1.2
     },
@@ -176,8 +176,8 @@ export const mediciLight = createMuiTheme({
     h6: { fontSize: '1.25rem', lineHeight: 1.2 },
 
     // subtitles
-    subtitle1: { fontSize: '1.5rem', fontWeight: 700, lineHeight: 1.4 },
-    subtitle2: { fontSize: '1rem', lineHeight: 1.4, fontWeight: 700 },
+    subtitle1: { fontSize: '1.5rem', fontWeight: 600, lineHeight: 1.4 },
+    subtitle2: { fontSize: '1rem', lineHeight: 1.4, fontWeight: 600 },
 
     // body
     body1: { fontSize: '1rem', lineHeight: 1.4 },
@@ -202,7 +202,7 @@ export const mediciLight = createMuiTheme({
     // button
     button: {
       fontSize: '1rem',
-      fontWeight: 700
+      fontWeight: 600
     }
   }
 })
